@@ -1,11 +1,32 @@
-import React from 'react'
+import Sidebar from "../components/sidebar";
+import ChatHeader from "../components/chatheader";
+import Messages from "../components/messages";
+import MessageInput from "../components/messageinput";
 
-const Chat = () => {
+function Chat() {
   return (
-    <>
-    <h2>Chat Screen</h2>
-    </>
-  )
+    <div style={styles.container}>
+      <Sidebar />
+
+      <div style={styles.chatSection}>
+        <ChatHeader />
+        <Messages />
+        <MessageInput />
+      </div>
+    </div>
+  );
 }
 
-export default Chat
+const styles = {
+  container: {
+    display: "flex",
+    height: "100vh",
+  },
+  chatSection: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+  },
+};
+
+export default Chat;
