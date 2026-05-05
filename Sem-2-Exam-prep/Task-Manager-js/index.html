@@ -7,12 +7,21 @@
   </head>
   <body>
     <section>
-      <label for="input">Please write your task below </label>
+      <label for="inputfield">Please write your task below </label>
       <input type="text" id="inputfield" />
-      <button id="Addbtn"> Add task</button>
+      <button id="addbtn">Add task</button>
     </section>
     <section>
-      <ul id="Tasktable"></ul>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody id="tasktable"></tbody>
+      </table>
     </section>
     <script src="script.js"></script>
   </body>
